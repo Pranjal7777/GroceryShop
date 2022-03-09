@@ -1,14 +1,11 @@
-export const AddToList = ({ item }) => {
-  const removeItem = (item) => {
-    console.log();
-  };
-
+export const AddToList = ({ item, remove, e }) => {
+  console.log(e);
   return (
     <div>
       <span>{item}</span>{" "}
       <button
         onClick={(item) => {
-          removeItem();
+          remove(e.id);
         }}
       >
         Remove
